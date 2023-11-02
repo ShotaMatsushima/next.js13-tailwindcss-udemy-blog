@@ -2,7 +2,6 @@
 
 import { createArticle } from "@/blog.api";
 import { useRouter } from "next/navigation";
-import { setegid } from "process";
 import React from "react";
 import { useState } from "react";
 

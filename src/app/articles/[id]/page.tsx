@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { getDetailArticle } from "@/blog.api";
+import DeleteButton from "@/app/components/DeleteButton";
 
 const Article = async ({ params }: { params: { id: string } }) => {
   const detailArticle = await getDetailArticle(params.id);
@@ -19,6 +20,9 @@ const Article = async ({ params }: { params: { id: string } }) => {
         <p className="text-lg leading-relaxed text-justify">
           {detailArticle.content}
         </p>
+      </div>
+      <div className="text-right mt-3">
+        <DeleteButton id={detailArticle.id} />
       </div>
     </div>
   );
